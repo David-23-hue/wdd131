@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">David Hue profile</title>
+  <desc id="desc">A stylized profile illustration for David Hue.</desc>
+  <rect width="220" height="220" rx="110" fill="#dfeaf4"/>
+  <circle cx="110" cy="84" r="42" fill="#457b9d"/>
+  <path d="M56 182c12-28 34-42 54-42s42 14 54 42" fill="#1d3557"/>
+  <circle cx="92" cy="78" r="4" fill="#ffffff"/>
+  <circle cx="128" cy="78" r="4" fill="#ffffff"/>
+  <path d="M94 100c8 9 18 13 28 13s20-4 28-13" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>

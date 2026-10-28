@@ -2,13 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url='week01/basic-layout.html'" />
-    <title>WDD 131 Redirect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 131 Dynamic Web Fundamentals course homepage for David Hue, featuring assignments, course overview, and learning resources.">
+    <meta name="author" content="David Hue">
+    <title>WDD 131 | David Hue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <p>Redirecting to the Week 01 layout page...</p>
+    <header>
+        <div class="site-header">
+            <a class="brand" href="index.html">WDD 131</a>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="#overview">Overview</a>
+                <a href="#course-work">Course Work</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">BYU-Idaho</p>
+                <h1>David Hue | WDD 131: Dynamic Web Fundamentals</h1>
+                <p>Front-end development essentials and design fundamentals for building accessible web experiences.</p>
+            </div>
+            <img src="images/profile.svg" alt="David Hue profile illustration" width="220" height="220">
+        </section>
+
+        <section id="overview" class="cards">
+            <h2>Course Overview</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Week 01</h3>
+                    <p>Learn page structure, semantic HTML, and foundational CSS layout techniques.</p>
+                </article>
+                <article class="card">
+                    <h3>Design Skills</h3>
+                    <p>Build accessible, responsive pages using modern HTML, CSS, and JavaScript best practices.</p>
+                </article>
+                <article class="card">
+                    <h3>Learning Goals</h3>
+                    <p>Strengthen web fundamentals through accessible, clean, and well-structured front-end work.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="course-work" class="content">
+            <h2>Course Work</h2>
+            <ul>
+                <li>Build semantic HTML pages with strong structure and accessibility.</li>
+                <li>Apply CSS layout techniques, including flexbox and grid.</li>
+                <li>Use JavaScript to enhance functionality while keeping pages clean and maintainable.</li>
+            </ul>
+        </section>
+
+        <section id="resources" class="content">
+            <h2>Resources</h2>
+            <div class="resource-links">
+                <a href="https://www.byui.edu/" target="_blank" rel="noreferrer">BYU-Idaho</a>
+                <a href="https://www.w3schools.com/html/" target="_blank" rel="noreferrer">HTML Basics</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">CSS
+                    Guide</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                    rel="noreferrer">JavaScript Guide</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p><a href="mailto:david.hue@example.com">David Hue</a> | &copy; <span id="year"></span></p>
+        <p>WDD 131 Dynamic Web Fundamentals</p>
+    </footer>
 </body>
 
 </html>
