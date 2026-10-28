@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="WDD 131 Dynamic Web Fundamentals course homepage for David Hue, featuring assignments, course overview, and learning resources.">
+        content="WDD 131 - Dynamic Web Fundamentals - David Hue. A course homepage covering web fundamentals, HTML, CSS, and JavaScript.">
     <meta name="author" content="David Hue">
-    <title>WDD 131 | David Hue</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – David Hue</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,71 +19,37 @@
 
 <body>
     <header>
-        <div class="site-header">
-            <a class="brand" href="index.html">WDD 131</a>
-            <nav aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="#overview">Overview</a>
-                <a href="#course-work">Course Work</a>
-                <a href="#resources">Resources</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav aria-label="Main navigation">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noreferrer">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
+                rel="noreferrer">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">BYU-Idaho</p>
-                <h1>David Hue | WDD 131: Dynamic Web Fundamentals</h1>
-                <p>Front-end development essentials and design fundamentals for building accessible web experiences.</p>
-            </div>
-            <img src="images/profile.svg" alt="David Hue profile illustration" width="220" height="220">
+        <h1>David Hue</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.svg" alt="David Hue profile illustration">
+            <p>I am a student in WDD 131 learning how to build accessible, user-friendly web pages with clean HTML, CSS,
+                and JavaScript.</p>
         </section>
 
-        <section id="overview" class="cards">
-            <h2>Course Overview</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Week 01</h3>
-                    <p>Learn page structure, semantic HTML, and foundational CSS layout techniques.</p>
-                </article>
-                <article class="card">
-                    <h3>Design Skills</h3>
-                    <p>Build accessible, responsive pages using modern HTML, CSS, and JavaScript best practices.</p>
-                </article>
-                <article class="card">
-                    <h3>Learning Goals</h3>
-                    <p>Strengthen web fundamentals through accessible, clean, and well-structured front-end work.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="course-work" class="content">
-            <h2>Course Work</h2>
-            <ul>
-                <li>Build semantic HTML pages with strong structure and accessibility.</li>
-                <li>Apply CSS layout techniques, including flexbox and grid.</li>
-                <li>Use JavaScript to enhance functionality while keeping pages clean and maintainable.</li>
-            </ul>
-        </section>
-
-        <section id="resources" class="content">
-            <h2>Resources</h2>
-            <div class="resource-links">
-                <a href="https://www.byui.edu/" target="_blank" rel="noreferrer">BYU-Idaho</a>
-                <a href="https://www.w3schools.com/html/" target="_blank" rel="noreferrer">HTML Basics</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">CSS
-                    Guide</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
-                    rel="noreferrer">JavaScript Guide</a>
-            </div>
+        <section class="card">
+            <h2>Course Focus</h2>
+            <img src="images/code.svg" alt="Web development illustration">
+            <p>This course helps me practice responsive design, semantic HTML structure, CSS layout techniques, and
+                interactive front-end development.</p>
         </section>
     </main>
 
-    <footer id="contact">
-        <p><a href="mailto:david.hue@example.com">David Hue</a> | &copy; <span id="year"></span></p>
-        <p>WDD 131 Dynamic Web Fundamentals</p>
+    <footer>
+        <p>&copy; <span id="year"></span> David Hue, Utah, USA.</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 

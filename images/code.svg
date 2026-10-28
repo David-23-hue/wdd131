@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Web development illustration</title>
+  <desc id="desc">A stylized web development illustration with code elements.</desc>
+  <rect width="240" height="180" rx="18" fill="#eef6ff"/>
+  <rect x="24" y="30" width="192" height="120" rx="12" fill="#1d3557"/>
+  <path d="M50 72 L34 90 L50 108" fill="none" stroke="#e63946" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 72 L126 90 L110 108" fill="none" stroke="#e63946" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 118 L104 62" fill="none" stroke="#a8dadc" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="170" cy="68" r="8" fill="#f1faee"/>
+  <circle cx="170" cy="92" r="8" fill="#f1faee"/>
+  <circle cx="170" cy="116" r="8" fill="#f1faee"/>
+</svg>
