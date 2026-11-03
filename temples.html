@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive album of temples from around the world.">
+    <meta name="author" content="David Hue">
+    <title>Temple Album | David Hue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-title" href="temples.html">Temple Album</a>
+        <nav aria-label="Main navigation">
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Open navigation menu">
+                <span aria-hidden="true">☰</span>
+            </button>
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="temples.html">Home</a></li>
+                <li><a href="#old">Old</a></li>
+                <li><a href="#new">New</a></li>
+                <li><a href="#large">Large</a></li>
+                <li><a href="#small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Gallery</h1>
+        <div class="temple-grid">
+            <figure id="old">
+                <img src="images/temples/salt-lake.jpg" alt="The Salt Lake Temple against a clear sky" width="360"
+                    height="225" fetchpriority="high">
+                <figcaption>
+                    Salt Lake Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:Salt_Lake_Temple,_Utah_-_Sept_2004.jpg"
+                            target="_blank"                             rel="noreferrer">Photo: David Iliff (cropped/resized)</a> · <a
+                            href="https://creativecommons.org/licenses/by/2.5/" target="_blank"
+                            rel="noreferrer">CC BY 2.5</a></small>
+                </figcaption>
+            </figure>
+            <figure id="new">
+                <img src="images/temples/rome.jpg" alt="The Rome Italy Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Rome Italy Temple
+                    <small class="photo-credit"><a href="https://commons.wikimedia.org/wiki/File:LDS_Rome_Temple_4.jpg"
+                            target="_blank" rel="noreferrer">Photo: NateBergin (cropped/resized)</a> · <a
+                            href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            rel="noreferrer">CC BY 4.0</a></small>
+                </figcaption>
+            </figure>
+            <figure id="large">
+                <img src="images/temples/washington-dc.jpg" alt="The Washington D.C. Temple illuminated at dusk"
+                    width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Washington D.C. Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:Washington_D.C._Temple_At_Dusk.jpg"
+                            target="_blank" rel="noreferrer">Photo: Joe Ravi (cropped/resized)</a> · <a
+                            href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"
+                            rel="noreferrer">CC BY-SA 3.0</a></small>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/temples/laie.jpg" alt="The Laie Hawaii Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Laie Hawaii Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:LDS_Laie_Hawaii_Temple_front_view.jpg"
+                            target="_blank" rel="noreferrer">Photo: Gh5046 (cropped/resized)</a> · Public domain</small>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/temples/tokyo.jpg" alt="The Tokyo Japan Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Tokyo Japan Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:Tokyo_LDS_Temple_by_opencontent.jpeg"
+                            target="_blank" rel="noreferrer">Photo: David Wiley (cropped/resized)</a> · <a
+                            href="https://creativecommons.org/licenses/by/2.0/" target="_blank"
+                            rel="noreferrer">CC BY 2.0</a></small>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/temples/suva.jpg" alt="The Suva Fiji Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Suva Fiji Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:Suva_Fiji_Temple_by_bhaskarroo_cropped.jpg"
+                            target="_blank" rel="noreferrer">Photo: Bhaskar Rao (cropped/resized)</a> · <a
+                            href="https://creativecommons.org/licenses/by/2.0/" target="_blank"
+                            rel="noreferrer">CC BY 2.0</a></small>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/temples/bern.jpg" alt="The Bern Switzerland Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Bern Switzerland Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:LDS_Bern_Switzerland_Temple.jpg"
+                            target="_blank" rel="noreferrer">Photo: MTPICHON (cropped/resized)</a> · Public domain</small>
+                </figcaption>
+            </figure>
+            <figure id="small">
+                <img src="images/temples/cardston.jpg" alt="The Cardston Alberta Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Cardston Alberta Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:Cardston_Alberta_LDS_Temple.jpg"
+                            target="_blank"                             rel="noreferrer">Photo: Kim Siever (cropped/resized)</a> · Public domain</small>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/temples/aba.jpg" alt="The Aba Nigeria Temple" width="360"
+                    height="225" loading="lazy">
+                <figcaption>
+                    Aba Nigeria Temple
+                    <small class="photo-credit"><a
+                            href="https://commons.wikimedia.org/wiki/File:The_Church_of_Jesus_Christ_of_Latter-Day_Siants_Temple,_Aba_Nigeria_Temple.jpg"
+                            target="_blank" rel="noreferrer">Photo: Lordbraiit1 (cropped/resized)</a> · <a
+                            href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            rel="noreferrer">CC BY 4.0</a></small>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> David Hue, Utah, USA.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

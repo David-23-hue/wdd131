@@ -1,0 +1,54 @@
+@media (min-width: 650px) {
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem max(1.5rem, calc((100% - 1100px) / 2));
+    }
+
+    .site-title {
+        margin: 0;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    nav {
+        flex: 1;
+        align-items: flex-end;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu,
+    .nav-menu.is-open {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.25rem;
+        padding: 0;
+    }
+
+    .nav-menu a {
+        padding: 0.6rem 0.8rem;
+    }
+
+    main {
+        padding-top: 2rem;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.4rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .temple-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.6rem;
+    }
+}
