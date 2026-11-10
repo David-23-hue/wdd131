@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Iceland through its dramatic landscapes, weather patterns, and memorable highlights."
+    />
+    <meta name="author" content="David Hue" />
+    <title>Iceland | Place Page</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="index.html">Course Home</a>
+        <a href="week01/basic-layout.html">Previous Work</a>
+        <a href="#overview">Overview</a>
+        <a href="#weather">Weather</a>
+      </nav>
+    </header>
+
+    <main class="place-page">
+      <section class="hero" aria-labelledby="place-title">
+        <picture class="hero-image">
+          <source
+            type="image/webp"
+            media="(max-width: 600px)"
+            srcset="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80&fm=webp 600w"
+          />
+          <source
+            type="image/webp"
+            media="(min-width: 601px)"
+            srcset="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80&fm=webp 1400w"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+            alt="A dramatic Icelandic landscape with mountains, water, and dark volcanic terrain"
+          />
+        </picture>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Nordic island nation</p>
+          <h1 id="place-title">Iceland</h1>
+          <p>
+            A land of glacier-blue lagoons, volcanic deserts, roaring waterfalls,
+            and unforgettable skies.
+          </p>
+        </div>
+      </section>
+
+      <section class="overview" id="overview">
+        <div class="section-heading">
+          <h2>Why visit Iceland?</h2>
+        </div>
+        <div class="overview-content">
+          <p>
+            Iceland is a place where fire and ice meet in dramatic fashion. From
+            black-sand beaches to geysers and geothermal spas, every landscape feels
+            cinematic.
+          </p>
+          <p>
+            Whether you are chasing the Northern Lights, soaking in the Blue Lagoon,
+            or driving the Ring Road, Iceland offers adventure and serenity in equal
+            measure.
+          </p>
+        </div>
+        <ul class="facts" aria-label="Iceland facts">
+          <li><span>Capital</span><strong>Reykjavík</strong></li>
+          <li><span>Area</span><strong>103,000 km²</strong></li>
+          <li><span>Language</span><strong>Icelandic</strong></li>
+          <li><span>Best known for</span><strong>Waterfalls &amp; lava fields</strong></li>
+        </ul>
+      </section>
+
+      <section class="weather" id="weather" aria-labelledby="weather-title">
+        <div class="weather-header">
+          <svg class="weather-icon" viewBox="0 0 24 24" role="img" aria-label="Weather icon">
+            <path d="M7 18a4 4 0 0 1-4-4 4 4 0 0 1 3.6-3.96A5.5 5.5 0 0 1 16.5 8a4.5 4.5 0 0 1 .56 8.94A4 4 0 0 1 7 18Zm2.2-6.8a1.3 1.3 0 0 0-1.18 1.8l.56.94c.2.32.62.44.97.28l.86-.39a1.3 1.3 0 0 0 .62-1.73l-.43-.75a1.3 1.3 0 0 0-1.4-.7Zm7.9 3.24a1.5 1.5 0 1 1-2.12 2.12l-.59-.59a1.5 1.5 0 0 1 2.12-2.12l.59.59Zm-2.33-5.57a1.5 1.5 0 1 1-2.12 2.12l-.59-.59a1.5 1.5 0 1 1 2.12-2.12l.59.59Z" fill="currentColor"/>
+          </svg>
+          <h2 id="weather-title">Weather</h2>
+        </div>
+        <div class="weather-card">
+          <div class="weather-temp-row">
+            <p class="label">Current</p>
+            <p class="temperature">38°F</p>
+          </div>
+          <p class="condition">Windy and cloudy</p>
+          <dl class="weather-details">
+            <div>
+              <dt>Wind chill</dt>
+              <dd id="windChillValue">N/A</dd>
+            </div>
+            <div>
+              <dt>Wind</dt>
+              <dd>12 mph</dd>
+            </div>
+            <div>
+              <dt>Humidity</dt>
+              <dd>72%</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="highlights" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">Top highlights</h2>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Blue Lagoon</h3>
+            <p>Relax in geothermal waters surrounded by black volcanic rock and steam.</p>
+          </article>
+          <article class="info-card">
+            <h3>Skógarkirkja</h3>
+            <p>Visit scenic waterfalls, dramatic cliffs, and iconic Icelandic roads.</p>
+          </article>
+          <article class="info-card">
+            <h3>Northern Lights</h3>
+            <p>Experience glowing auroras that make the night sky feel like a living painting.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> David Hue</p>
+      <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>

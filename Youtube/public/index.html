@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131b">
+  <title>Clip Studio — Local video clips</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Clip Studio home">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span>clip<span class="brand-light">studio</span></span>
+    </a>
+    <div class="local-badge"><span aria-hidden="true"></span> Runs on this computer</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">YOUR VIDEO, YOUR CUT</p>
+      <h1>Make a moment<br><span>worth sharing.</span></h1>
+      <p class="lede">Choose a video you own, set the moment, and create a ready-to-post clip. Your video is processed locally.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="panel source-panel" aria-labelledby="source-heading">
+        <div class="section-heading">
+          <span class="step">01</span>
+          <div>
+            <h2 id="source-heading">Choose your video</h2>
+            <p>Use a video you own or have permission to edit.</p>
+          </div>
+        </div>
+        <label class="dropzone" id="dropzone" for="video-file">
+          <input id="video-file" type="file" accept="video/*">
+          <span class="upload-icon" aria-hidden="true">↑</span>
+          <span class="drop-title">Drop a video here or <span>browse files</span></span>
+          <span class="drop-hint">MP4, MOV, WebM · Up to 5 GB</span>
+        </label>
+        <div class="source-info" id="source-info" hidden>
+          <div class="file-icon" aria-hidden="true">▶</div>
+          <div class="file-details">
+            <strong id="source-name"></strong>
+            <span id="source-meta"></span>
+          </div>
+          <button class="text-button" id="remove-source" type="button" aria-label="Remove selected video">Remove</button>
+        </div>
+        <video id="source-preview" class="source-preview" controls playsinline hidden></video>
+        <p class="privacy-note"><span aria-hidden="true">⌑</span> Your source stays in this browser. Only the finished clip is sent to YouTube.</p>
+      </section>
+
+      <section class="panel editor-panel" aria-labelledby="edit-heading">
+        <div class="section-heading">
+          <span class="step">02</span>
+          <div>
+            <h2 id="edit-heading">Shape your clip</h2>
+            <p>Choose a moment up to 3 minutes long.</p>
+          </div>
+        </div>
+        <div class="time-fields">
+          <label>Start time
+            <span class="input-wrap"><input id="start-time" type="number" min="0" step="1" value="0" disabled><span>sec</span></span>
+          </label>
+          <label>Clip length
+            <span class="input-wrap"><input id="clip-length" type="number" min="1" max="180" step="1" value="30" disabled><span>sec</span></span>
+          </label>
+        </div>
+        <label class="field-label" for="clip-format">Video format</label>
+        <select id="clip-format" disabled>
+          <option value="vertical">Vertical 9:16 · Shorts, Reels, TikTok</option>
+          <option value="landscape">Landscape 16:9</option>
+        </select>
+        <p class="helper-text">Your browser records the clip in real time. The output is WebM.</p>
+        <div class="timeline" aria-hidden="true">
+          <div class="timeline-track"><span class="timeline-selection"></span><span class="timeline-playhead"></span></div>
+          <div class="timeline-labels"><span>0:00</span><span id="timeline-duration">Choose a video</span></div>
+        </div>
+        <p class="helper-text">Set the start time and length above. Vertical clips use a centered crop.</p>
+      </section>
+
+      <section class="panel upload-panel" aria-labelledby="upload-heading">
+        <div class="section-heading">
+          <span class="step">03</span>
+          <div>
+            <h2 id="upload-heading">Upload to YouTube</h2>
+            <p>Connect once per session with Google’s secure sign-in.</p>
+          </div>
+        </div>
+        <div class="youtube-connect">
+          <div class="youtube-mark" aria-hidden="true">▶</div>
+          <div class="channel-details">
+            <strong id="channel-label">YouTube not connected</strong>
+            <span id="channel-status">Authorization is required to upload.</span>
+          </div>
+          <button class="button button-outline" id="connect-button" type="button">Connect</button>
+        </div>
+        <label class="field-label" for="client-id">Google OAuth client ID</label>
+        <input id="client-id" class="text-input" type="text" placeholder="xxxxx.apps.googleusercontent.com" autocomplete="off" spellcheck="false">
+        <p class="helper-text">Create a Web application OAuth ID and add <code>http://localhost:4173</code> as an authorized JavaScript origin. <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noreferrer">Google Cloud credentials ↗</a></p>
+        <label class="field-label" for="video-title">YouTube title</label>
+        <input id="video-title" class="text-input" type="text" maxlength="100" placeholder="Give your clip a title">
+        <label class="field-label" for="video-description">Description <span class="optional">optional</span></label>
+        <textarea id="video-description" class="text-input" rows="2" maxlength="5000" placeholder="Add context or links"></textarea>
+        <div class="upload-options">
+          <label>Visibility
+            <select id="visibility">
+              <option value="private">Private · only you can view</option>
+              <option value="unlisted">Unlisted · link holders can view</option>
+              <option value="public">Public · anyone can view</option>
+            </select>
+          </label>
+          <label class="checkbox-label"><input id="made-for-kids" type="checkbox"> Made for kids</label>
+        </div>
+        <p class="helper-text">Uploads go to the channel you select during Google sign-in. Your access token stays in memory and expires; reconnect when needed.</p>
+      </section>
+    </div>
+
+    <section class="action-area" aria-live="polite">
+      <div class="status-message" id="status-message">Choose a video to get started.</div>
+      <button class="button button-primary" id="create-button" type="button" disabled>
+        <span id="create-button-label">Clip &amp; upload</span><span aria-hidden="true">↗</span>
+      </button>
+    </section>
+    <section class="result-panel" id="result-panel" hidden>
+      <div class="result-copy">
+        <span class="success-icon" aria-hidden="true">✓</span>
+        <div><h2 id="result-title">Your clip is ready</h2><p id="result-description"></p></div>
+      </div>
+      <div class="result-actions">
+        <a class="button button-outline" id="youtube-link" href="#" target="_blank" rel="noreferrer" hidden>Open on YouTube ↗</a>
+        <a class="button button-outline" id="download-link" href="#" download="clip.mp4">Download clip ↓</a>
+      </div>
+    </section>
+    <p class="disclaimer">Only clip and upload content you own or have permission to use. YouTube’s OAuth access can be revoked anytime from your Google Account. <a href="https://myaccount.google.com/permissions" target="_blank" rel="noreferrer">Manage access ↗</a></p>
+  </main>
+  <footer><span>clipstudio</span><span>Local-first video tools</span></footer>
+</body>
+</html>

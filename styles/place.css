@@ -1,0 +1,364 @@
+:root {
+  --bg: #f5efe8;
+  --surface: #fffaf3;
+  --surface-strong: #f0dfc7;
+  --primary: #1d3d4f;
+  --primary-soft: #2d5d75;
+  --accent: #d97d43;
+  --accent-dark: #9a4f2d;
+  --text: #1f2933;
+  --muted: #5d6976;
+  --shadow: rgba(29, 61, 79, 0.18);
+  --border: rgba(29, 61, 79, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+dl,
+dd,
+dt,
+ul,
+li {
+  margin-top: 0;
+}
+
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 0.75rem;
+}
+
+.top-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.place-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: end;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 18px 28px var(--shadow);
+}
+
+.hero-image img {
+  width: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.hero-copy {
+  padding: 1.25rem 1.1rem 1.5rem;
+  background: linear-gradient(180deg, rgba(29, 61, 79, 0.18), rgba(29, 61, 79, 0.7));
+  margin-top: -110px;
+  position: relative;
+  color: #fff;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.85;
+  margin-bottom: 0.4rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 7vw, 4rem);
+  line-height: 1.05;
+  color: #fff;
+}
+
+.hero-copy p:last-child {
+  margin: 0.8rem 0 0;
+  max-width: 36rem;
+  font-size: 1.05rem;
+}
+
+.overview,
+.weather,
+.highlights {
+  margin-top: 2rem;
+}
+
+.section-heading h2,
+.weather h2,
+.highlights h2 {
+  margin: 0 0 1rem;
+  color: var(--primary);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.overview-content {
+  display: grid;
+  gap: 0.8rem;
+  color: var(--text);
+  font-size: 1.06rem;
+}
+
+.facts {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.facts li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 10px 20px rgba(13, 27, 42, 0.06);
+}
+
+.facts span,
+.facts strong {
+  display: block;
+}
+
+.facts span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.facts strong {
+  margin-top: 0.35rem;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.weather-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--primary-soft);
+  display: inline-block;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, var(--surface), var(--surface-strong));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 12px 24px rgba(29, 61, 79, 0.08);
+}
+
+.weather-temp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(29, 61, 79, 0.12);
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.85rem;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.temperature {
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.condition {
+  margin: 0 0 1rem;
+  color: var(--primary-soft);
+  font-weight: 600;
+}
+
+.weather-details {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.weather-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(29, 61, 79, 0.08);
+  padding-bottom: 0.4rem;
+}
+
+.weather-details dt,
+.weather-details dd {
+  margin: 0;
+}
+
+.weather-details dt {
+  color: var(--muted);
+}
+
+.weather-details dd {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.1rem 1rem;
+  box-shadow: 0 10px 18px rgba(29, 61, 79, 0.06);
+}
+
+.info-card h3 {
+  margin-bottom: 0.4rem;
+  color: var(--primary);
+}
+
+.info-card p {
+  margin: 0;
+  color: var(--text);
+}
+
+.site-footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 1rem 1.5rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    grid-template-columns: 1.45fr 0.85fr;
+    min-height: 420px;
+  }
+
+  .hero-image {
+    height: 100%;
+  }
+
+  .hero-image img {
+    min-height: 100%;
+  }
+
+  .hero-copy {
+    margin-top: 0;
+    background: rgba(29, 61, 79, 0.68);
+    padding: 2rem 1.6rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .section-heading {
+    grid-column: 1 / -1;
+  }
+
+  .weather {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+    color: var(--accent-dark);
+  }
+
+  .weather-icon {
+    display: none;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 699px) {
+  .weather h2::after {
+    content: none;
+  }
+}
