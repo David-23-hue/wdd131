@@ -101,7 +101,7 @@ li {
 
 .hero-copy {
   padding: 1.25rem 1.1rem 1.5rem;
-  background: linear-gradient(180deg, rgba(29, 61, 79, 0.18), rgba(29, 61, 79, 0.7));
+  background: linear-gradient(180deg, rgba(29, 61, 79, 0.82), rgba(29, 61, 79, 0.9));
   margin-top: -110px;
   position: relative;
   color: #fff;
@@ -344,7 +344,7 @@ li {
   }
 
   .weather h2::after {
-    content: " ⛅";
+    content: " \26C5";
     color: var(--accent-dark);
   }
 
